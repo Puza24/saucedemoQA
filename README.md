@@ -5,3 +5,4 @@ On this project we wil be testing saucedemo webpage that is online product store
 * WebDriverIo
 * Gherkin Syntax
 * Cucumber
+- Code to run tests `npx wdio run ./wdio.conf.js`

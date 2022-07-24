@@ -7,6 +7,8 @@ The goal here is to learn as much as we can about how to find bugs,use GitHub an
 * Gherkin Syntax
 * Cucumber
 # Link
-*  webpage [Saucedemo](https://www.saucedemo.com/)
+* [WebDriverIo](https://webdriver.io/)
+* [Saucedemo](https://www.saucedemo.com/)
 # Code
--  to run tests `npx wdio run ./wdio.conf.js`
+- to install webdriverio `npm init wdio .`
+- to run tests `npx wdio run ./wdio.conf.js`

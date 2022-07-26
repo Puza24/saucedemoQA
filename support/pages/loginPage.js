@@ -1,7 +1,6 @@
 
 
 const Page = require('./basePage');
-const assert = require('assert');
 
 /**
  * sub page containing specific selectors and methods for a specific page
@@ -36,8 +35,6 @@ class LoginPage extends Page {
         this.btnSubmit.click()
 
     }
-
-
 }
 
 module.exports = new LoginPage();

@@ -15,10 +15,8 @@ When(/^The user click login button$/, () => {
 });
 
 Then(/^The user should see www.saucedemo.com home page$/, () => {
-	
-	
+		browser.pause(2000)
 });
-
 
 Given(/^The user is on home page$/, () => {
 	browser.url("/inventory.html");
@@ -32,6 +30,13 @@ Then(/^The user should se dropdown menu$/, () => {
 	browser.pause(2000)
 });
 
+When(/^The user click on all items card$/, () => {
+	HomePage.clickAllItemsCard();
+});
+
+Then(/^The user should se all product displayed$/, () => {
+	browser.pause(2000)
+});
 
 
 

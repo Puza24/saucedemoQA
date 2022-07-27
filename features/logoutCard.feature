@@ -10,6 +10,6 @@ Feature: Saucedemo Login Page
     Given The user is on home page
     When The user click on burger menu
     Then The user should se dropdown menu
-    When The user click on about card
-    Then The user should see about page
+    When The user click logout card
+    Then The user should be redirected to login page
    

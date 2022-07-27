@@ -30,11 +30,11 @@ Then(/^The user should se dropdown menu$/, () => {
 	browser.pause(2000)
 });
 
-When(/^The user click on about card$/, () => {
-	HomePage.clickAboutCard();
+When(/^The user click logout card$/, () => {
+	HomePage.clickLogoutCard();
 });
 
-Then(/^The user should see about page$/, () => {
+Then(/^The user should be redirected to login page$/, () => {
 	browser.pause(2000)
 });
 

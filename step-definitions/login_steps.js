@@ -30,14 +30,13 @@ Then(/^The user should se dropdown menu$/, () => {
 	browser.pause(2000)
 });
 
-When(/^The user click on all items card$/, () => {
-	HomePage.clickAllItemsCard();
+When(/^The user click on about card$/, () => {
+	HomePage.clickAboutCard();
 });
 
-Then(/^The user should se all product displayed$/, () => {
+Then(/^The user should see about page$/, () => {
 	browser.pause(2000)
 });
-
 
 
 

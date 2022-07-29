@@ -6,7 +6,6 @@ const CheckoutYourInfoPage = require('../support/pages/checkoutYourInfoPage');
 const CheckoutOverview = require('../support/pages/checkoutOverview');
 const userData = require("../config/data/userData");
 
-
 When(/^The user click shopping cart button$/, () => {
 	HomePage.clickShoppingCartButton();
 });
@@ -35,7 +34,7 @@ Given(/^The user is on checkout your info page$/, () => {
 });
 
 When(/^The user fill in necessary info$/, () => {
-	CheckoutYourInfoPage.inputFirstnameLastnameAndZip(userData.firstname, userData.lastname, userData.zip);
+	CheckoutYourInfoPage.inputUsernameLastNameAndZip(userData.firstname, userData.lastname, userData.zip);
 });
 
 

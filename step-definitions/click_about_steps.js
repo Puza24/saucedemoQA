@@ -1,8 +1,7 @@
 const { Given, When, Then } = require('@wdio/cucumber-framework');
 const LoginPage = require('../support/pages/loginPage');
 const HomePage = require('../support/pages/homePage');
-
-
+const userData = require("../config/data/userData");
 
 Given(/^The user is on home page$/, () => {
 	browser.url("/");
@@ -10,7 +9,6 @@ Given(/^The user is on home page$/, () => {
 	LoginPage.clickLoginButton();
 	HomePage.checkIfUserIsLogedIn();
 });
-
 
 When(/^The user click on burger button$/, () => {
 	HomePage.clickBurgerButton();

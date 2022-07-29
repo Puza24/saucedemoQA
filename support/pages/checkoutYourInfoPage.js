@@ -5,10 +5,10 @@ const Page = require('./basePage');
 
 class CheckoutYourInfoPage extends Page {
    
-  get inputFirstname(){
+  get inputFirstName(){
     return $('//input[@id="first-name"]');
   }
-  get inputLastname(){
+  get inputLastName(){
     return $('//input[@id="last-name"]'); 
   }
   
@@ -19,9 +19,9 @@ class CheckoutYourInfoPage extends Page {
     return $('//input[@id="continue"]')
   }
 
-   inputUsernameLastnameAndZip(firstname, lastname, zip){
-    this.inputFirstname.setValue(firstname);
-    this.inputLastname.setValue(lastname);
+  inputFirstNameLastNameAndZip(firstname, lastname, zip){
+    this.inputFirstName.setValue(firstname);
+    this.inputLastName.setValue(lastname);
     this.inputZip.setValue(zip);
 } 
 clickContinueButton() {

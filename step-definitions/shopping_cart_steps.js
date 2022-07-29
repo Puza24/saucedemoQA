@@ -35,7 +35,7 @@ Given(/^The user is on checkout your info page$/, () => {
 });
 
 When(/^The user fill in necessary info$/, () => {
-	CheckoutYourInfoPage.inputFirstnameLastnameAndZip(userData.firstname, userData.lastname, userData.zip);
+	CheckoutYourInfoPage.inputFirstNameLastNameAndZip(userData.firstname, userData.lastname, userData.zip);
 });
 
 

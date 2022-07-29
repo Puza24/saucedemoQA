@@ -3,7 +3,6 @@ const LoginPage = require('../support/pages/loginPage');
 const HomePage = require('../support/pages/homePage');
 
 
-
 When(/^The user click on burger menu$/, () => {
 	HomePage.clickBurgerButton();
 });

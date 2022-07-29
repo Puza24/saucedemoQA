@@ -44,10 +44,10 @@ class HomePage extends Page {
   this.aboutCard.click()
 
 }
-
-clickAllItemsCard() {
+clickAllItemsCard(){
   this.allItemsCard.click()
- }
+}
+
 
  clickLogoutCard(){
   this.logoutCard.click()

@@ -1,11 +1,6 @@
+const { Given, When, Then } = require('@wdio/cucumber-framework');
 const LoginPage = require('../support/pages/loginPage');
 const HomePage = require('../support/pages/homePage');
-
-
-When(/^The user click on burger button$/, () => {
-	HomePage.clickBurgerButton();
-});
-
 
 When(/^The user click logout button$/, () => {
 	HomePage.clickLogoutCard()

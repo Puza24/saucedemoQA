@@ -4,31 +4,30 @@ const Page = require('./basePage');
 
 
 class CheckoutYourInfoPage extends Page {
-   
-  get inputUsername(){
+
+  get inputFirstname() {
     return $('//input[@id="first-name"]');
   }
-  get inputPassword(){
-    return $('//input[@id="last-name"]'); 
+  get inputLastname() {
+    return $('//input[@id="last-name"]');
   }
-  
-  get inputZip(){
+
+  get inputZip() {
     return $('//input[@id="postal-code"]')
   }
-  get continueButton(){
+  get continueButton() {
     return $('//input[@id="continue"]')
   }
 
-
-   inputUsernameLastnameAndZip(username, password, zip){
-    this.inputUsername.setValue(username);
-    this.inputPassword.setValue(password);
+  inputUsernameLastNameAndZip(firstName, lastName, zip) {
+    this.inputFirstname.setValue(firstName);
+    this.inputLastname.setValue(lastName);
     this.inputZip.setValue(zip);
-} 
-clickContinueButton() {
-        this.continueButton.click()
+  }
+  clickContinueButton() {
+    this.continueButton.click()
 
-    }
+  }
 }
 
 module.exports = new CheckoutYourInfoPage();

@@ -8,7 +8,7 @@ When(/^The user click logout button$/, () => {
 
 
 Then(/^The user should be redirected to login page$/, () => {
-	browser.url("/")
+	LoginPage.checkloginPageIsDisplayed();
 });
 
 

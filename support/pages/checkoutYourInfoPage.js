@@ -20,9 +20,9 @@ class CheckoutYourInfoPage extends Page {
   }
 
   inputFirstNameLastNameAndZip(firstname, lastname, zip){
-    this.inputFirstName.setValue(firstname);
-    this.inputLastName.setValue(lastname);
-    this.inputZip.setValue(zip);
+    this.setValue(this.inputFirstName, firstname);
+    this.setValue(this.inputLastName, lastname);
+    this.setValue(this.inputZip, zip);
 } 
 clickContinueButton() {
         this.continueButton.click()

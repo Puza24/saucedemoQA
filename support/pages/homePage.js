@@ -13,6 +13,12 @@ class HomePage extends Page {
   get dropdownMenu(){
     return $('//nav[@class="bm-item-list"]');
   }
+   get FilterButton(){
+    return $('//select[@class="product_sort_container"]')
+   }
+   get lowToHigh(){
+     return $('//option[@value="lohi"]')
+   }
 
   get aboutCard(){
     return $('//a[@id="about_sidebar_link"]');
@@ -26,8 +32,14 @@ class HomePage extends Page {
   get shoppingCart(){
     return $('//a[@class="shopping_cart_link"]'); 
   }
+  get productsText(){
+    return $('//span[@class="title"]');
+  }
   checkIfUserIsLogedIn() {
     assert.equal(this.burgerMenu.isDisplayed(), true,"BurgerMenu button is displayed");
+  }
+  checkIfUserIsLogedIn(){
+  assert.equal(this.getText(this.productsText), 'PRODUCTS',"Products text is displayed");
   }
   allProductIsDisplayed(){
     assert.equal(this.allProduct.isDisplayed(), true, "All product is displayed");
@@ -35,13 +47,19 @@ class HomePage extends Page {
   dropdownMenuIsDisplayed(){
     assert.equal(this.dropdownMenu.isDisplayed(), true, "Dropdown menu is displayed");
   }
-  
+  clickFilterButton(){
+    this.FilterButton.click();
+  }
+  clickLowToHigh(){
+    this.lowToHigh.click();
+  }
+
   clickBurgerButton() {
     this.burgerMenu.click()
  }
 
  clickAboutCard() {
-  this.aboutCard.click()
+  this.click(this.aboutCard);
 
 }
 clickAllItemsCard(){

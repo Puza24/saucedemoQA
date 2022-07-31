@@ -2,7 +2,7 @@ const { Given, When, Then } = require('@wdio/cucumber-framework');
 const LoginPage = require('../support/pages/loginPage');
 const HomePage = require('../support/pages/homePage');
 const userData = require("../config/data/userData");
-
+const SauceLabsPage = require("../support/pages/sauceLabsPage");
 
 Given(/^The user is on home page$/, () => {
 	browser.url("/");
@@ -16,7 +16,7 @@ When(/^The user click on burger button$/, () => {
 });
 
 Then(/^The user should see dropdown menu$/, () => {
-	return true;
+	HomePage.dropdownMenuIsDisplayed();
 });
 
 
@@ -26,7 +26,7 @@ When(/^The user click on about button$/, () => {
 
 
 Then(/^The user should see www.saucelabs.com$/, () => {
-	browser.url('https://saucelabs.com/')
+	SauceLabsPage.checkIfSauceLabsIsDisplayed();
 });
 
 

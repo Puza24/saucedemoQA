@@ -1,10 +1,12 @@
 
-
 const Page = require('./basePage');
-
+const assert = require('assert');
 
 class CheckoutYourInfoPage extends Page {
-   
+
+  get infoPageIsDisplayed(){
+    return $('//div[@class="checkout_info"]');
+  }
   get inputFirstName(){
     return $('//input[@id="first-name"]');
   }
@@ -18,6 +20,10 @@ class CheckoutYourInfoPage extends Page {
   get continueButton(){
     return $('//input[@id="continue"]')
   }
+  checkIfCheckoutYourInfoPageIsDisplayed(){
+    assert.equal(this.infoPageIsDisplayed.isDisplayed(), true, "Info page is displayed");
+    
+   }
 
   inputFirstNameLastNameAndZip(firstname, lastname, zip){
     this.setValue(this.inputFirstName, firstname);

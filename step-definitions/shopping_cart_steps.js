@@ -5,14 +5,14 @@ const CheckoutPage = require('../support/pages/checkoutPage');
 const CheckoutYourInfoPage = require('../support/pages/checkoutYourInfoPage');
 const CheckoutOverview = require('../support/pages/checkoutOverview');
 const userData = require("../config/data/userData");
-
+const CompletePage = require('../support/pages/checkoutCompletePage')
 
 When(/^The user click shopping cart button$/, () => {
 	HomePage.clickShoppingCartButton();
 });
 
 Then(/^The user should se checkout page$/, () => {
-	browser.url("/cart.html");
+	CheckoutPage.checkIfCheckoutPageIsDisplayed();
 });
 
 
@@ -26,7 +26,7 @@ When(/^The user click checkout button$/, () => {
 });
 
 Then(/^The user should se checkout your info page$/, () => {
-	browser.url("/checkout-step-one.html");
+	CheckoutYourInfoPage.checkIfCheckoutYourInfoPageIsDisplayed();
 });
 
 
@@ -45,9 +45,8 @@ When(/^The user click continue$/, () => {
 
 
 Then(/^The checkout overview page should display$/, () => {
-	browser.url("/checkout-step-two.html");
+	CheckoutOverview.checkIfCheckoutOverviewIsDisplayed();
 });
-
 
 
 Given(/^The user is on checkoutoverview page$/, () => {
@@ -60,7 +59,7 @@ When(/^The user click finish button$/, () => {
 });
 
 Then(/^The "([^"]*)" page should display$/, (args1) => {
-	browser.url("/checkout-complete.html");
-	
+	CompletePage.checkoutIfCompletePageIsDisplayed();
+
 });
 

@@ -4,83 +4,103 @@ const assert = require('assert');
 
 class HomePage extends Page {
 
-  get burgerMenu(){
-    return $('//button[@id = "react-burger-menu-btn"]'); 
+  get burgerMenu() {
+    return $('//button[@id = "react-burger-menu-btn"]');
   }
-  get allProduct(){
+  get allProduct() {
     return $('//div[@id="inventory_container" and @class="inventory_container"]');
   }
-  get dropdownMenu(){
+  get dropdownMenu() {
     return $('//nav[@class="bm-item-list"]');
   }
-   get FilterButton(){
+  get FilterButton() {
     return $('//select[@class="product_sort_container"]')
-   }
-   get lowToHigh(){
-     return $('//option[@value="lohi"]')
-   }
-    get twitterButton(){
-      return $('//a[@href="https://twitter.com/saucelabs"]');
-    }
+  }
+  get lowToHigh() {
+    return $('//option[@value="lohi"]')
+  }
+  get highToLow() {
+    return $('//option[@value="hilo"]')
+  }
+  get aToZ() {
+    return $('//option[@value="az"]');
+  }
+  get zToA() {
+    return $('//option[@value="za"]')
+  }
 
-  get aboutCard(){
+  get twitterButton() {
+    return $('//a[@href="https://twitter.com/saucelabs"]');
+  }
+
+  get aboutCard() {
     return $('//a[@id="about_sidebar_link"]');
   }
-  get allItemsCard(){
+  get allItemsCard() {
     return $('//a[@id="inventory_sidebar_link"]');
-  } 
-  get logoutCard(){
+  }
+  get logoutCard() {
     return $('//a[@id="logout_sidebar_link"]');
   }
-  get shoppingCart(){
-    return $('//a[@class="shopping_cart_link"]'); 
+  get shoppingCart() {
+    return $('//a[@class="shopping_cart_link"]');
   }
-  get productsText(){
+  get productsText() {
     return $('//span[@class="title"]');
   }
   checkIfUserIsLogedIn() {
-    assert.equal(this.burgerMenu.isDisplayed(), true,"BurgerMenu button is displayed");
+    assert.equal(this.burgerMenu.isDisplayed(), true, "BurgerMenu button is displayed");
   }
-  checkIfUserIsLogedIn(){
-  assert.equal(this.getText(this.productsText), 'PRODUCTS',"Products text is displayed");
+  checkIfUserIsLogedIn() {
+    assert.equal(this.getText(this.productsText), 'PRODUCTS', "Products text is displayed");
   }
-  allProductIsDisplayed(){
+  allProductIsDisplayed() {
     assert.equal(this.allProduct.isDisplayed(), true, "All product is displayed");
   }
-  dropdownMenuIsDisplayed(){
+  dropdownMenuIsDisplayed() {
     assert.equal(this.dropdownMenu.isDisplayed(), true, "Dropdown menu is displayed");
   }
-  clickFilterButton(){
+  clickFilterButtonLowHigh() {
     this.click(this.FilterButton);
   }
-  clickLowToHigh(){
+  clickLowToHigh() {
     this.click(this.lowToHigh);
   }
-  clickTwitterButton(){
+  clickHighToLow() {
+    this.click(this.highToLow);
+  }
+  clickFilterAToZ() {
+    this.click(this.aToZ);
+  }
+  clickFilterZToA(){
+    this.click(this.zToA);
+  }
+
+  clickTwitterButton() {
     this.click(this.twitterButton);
   }
 
   clickBurgerButton() {
     this.click(this.burgerMenu);
- }
+  }
 
- clickAboutCard() {
-  this.click(this.aboutCard);
+  clickAboutCard() {
+    this.click(this.aboutCard);
+
+  }
+  clickAllItemsCard() {
+    this.click(this.allItemsCard);
+  }
+
+
+  clickLogoutCard() {
+    this.click(this.logoutCard);
+  }
+
+  clickShoppingCartButton() {
+    this.click(this.shoppingCart);
+  }
 
 }
-clickAllItemsCard(){
-  this.click(this.allItemsCard);
-}
-
-
- clickLogoutCard(){
-  this.click(this.logoutCard);
- }
- 
-  clickShoppingCartButton(){
-  this.click(this.shoppingCart);
- }
-
-}  
 
 module.exports = new HomePage();

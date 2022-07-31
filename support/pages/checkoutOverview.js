@@ -12,7 +12,7 @@ class CheckoutOverview extends Page {
 
 
   clickFinishButton() {
-        this.finishButton.click()
+        this.click(this.finishButton);
 
     }
 }

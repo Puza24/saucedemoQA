@@ -1,6 +1,5 @@
 Feature: Saucedemo Filter Button
 
-
   Scenario: Navigating to filter button
     Given The user is on home page
     When The user click on filter button

@@ -25,7 +25,7 @@ class CheckoutYourInfoPage extends Page {
     this.setValue(this.inputZip, zip);
 } 
 clickContinueButton() {
-        this.continueButton.click()
+        this.click(this.continueButton);
 
     }
 }

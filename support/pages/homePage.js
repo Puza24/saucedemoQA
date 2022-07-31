@@ -19,6 +19,9 @@ class HomePage extends Page {
    get lowToHigh(){
      return $('//option[@value="lohi"]')
    }
+    get twitterButton(){
+      return $('//a[@href="https://twitter.com/saucelabs"]');
+    }
 
   get aboutCard(){
     return $('//a[@id="about_sidebar_link"]');
@@ -48,14 +51,17 @@ class HomePage extends Page {
     assert.equal(this.dropdownMenu.isDisplayed(), true, "Dropdown menu is displayed");
   }
   clickFilterButton(){
-    this.FilterButton.click();
+    this.click(this.FilterButton);
   }
   clickLowToHigh(){
-    this.lowToHigh.click();
+    this.click(this.lowToHigh);
+  }
+  clickTwitterButton(){
+    this.click(this.twitterButton);
   }
 
   clickBurgerButton() {
-    this.burgerMenu.click()
+    this.click(this.burgerMenu);
  }
 
  clickAboutCard() {
@@ -63,16 +69,16 @@ class HomePage extends Page {
 
 }
 clickAllItemsCard(){
-  this.allItemsCard.click()
+  this.click(this.allItemsCard);
 }
 
 
  clickLogoutCard(){
-  this.logoutCard.click()
+  this.click(this.logoutCard);
  }
  
   clickShoppingCartButton(){
-  this.shoppingCart.click()
+  this.click(this.shoppingCart);
  }
 
 }  

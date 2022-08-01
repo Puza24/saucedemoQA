@@ -6,9 +6,11 @@ When(/^The user click on option high-low$/, () => {
 	HomePage.clickHighToLow();
 });
 
+
 Then(/^The user should see all products listed high-low$/, () => {
 	return true;
 });
+
 
 
 

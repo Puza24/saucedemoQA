@@ -66,6 +66,7 @@ class HomePage extends Page {
   dropdownMenuIsDisplayed() {
     assert.equal(this.dropdownMenu.isDisplayed(), true, "Dropdown menu is displayed");
   }
+ 
   clickFilterButtonLowHigh() {
     this.click(this.FilterButton);
   }

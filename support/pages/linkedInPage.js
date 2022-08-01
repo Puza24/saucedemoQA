@@ -10,6 +10,7 @@ class LinkedInPage extends Page {
 
   checkIfLinkedInLoginPageIsDisplayed(){
     assert.equal(this.linkedInLabs.isDisplayed(), false, "LinkedIn login page is displayed");
+    assert.equal(this.linkedInLabs.isClickable(), false, "Button is clickable");
   }
   
 }

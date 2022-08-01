@@ -32,6 +32,12 @@ class HomePage extends Page {
   get twitterButton() {
     return $('//a[@href="https://twitter.com/saucelabs"]');
   }
+  get facebookButton(){
+    return $('//a[@href="https://www.facebook.com/saucelabs"]');
+  }
+  get linkedInButton(){
+    return $('//a[@href="https://www.linkedin.com/company/sauce-labs/"]');
+  }
 
   get aboutCard() {
     return $('//a[@id="about_sidebar_link"]');
@@ -60,6 +66,7 @@ class HomePage extends Page {
   dropdownMenuIsDisplayed() {
     assert.equal(this.dropdownMenu.isDisplayed(), true, "Dropdown menu is displayed");
   }
+ 
   clickFilterButtonLowHigh() {
     this.click(this.FilterButton);
   }
@@ -78,6 +85,12 @@ class HomePage extends Page {
 
   clickTwitterButton() {
     this.click(this.twitterButton);
+  }
+  clickFacebookButton(){
+    this.click(this.facebookButton);
+  }
+  clickLiknedInButton(){
+    this.click(this.linkedInButton);
   }
 
   clickBurgerButton() {

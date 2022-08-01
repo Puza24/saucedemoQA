@@ -13,17 +13,25 @@ class CheckoutYourInfoPage extends Page {
   get inputLastName(){
     return $('//input[@id="last-name"]'); 
   }
-  
-  get inputZip(){
+  get inputFirstname() {
+    return $('//input[@id="first-name"]');
+  }
+  get inputLastname() {
+    return $('//input[@id="last-name"]');
+
+  }
+
+  get inputZip() {
     return $('//input[@id="postal-code"]')
   }
-  get continueButton(){
+  get continueButton() {
     return $('//input[@id="continue"]')
   }
   checkIfCheckoutYourInfoPageIsDisplayed(){
     assert.equal(this.infoPageIsDisplayed.isDisplayed(), true, "Info page is displayed");
     
    }
+
 
   inputFirstNameLastNameAndZip(firstname, lastname, zip){
     this.setValue(this.inputFirstName, firstname);
@@ -32,8 +40,17 @@ class CheckoutYourInfoPage extends Page {
 } 
 clickContinueButton() {
         this.click(this.continueButton);
+}
+  inputUsernameLastNameAndZip(firstName, lastName, zip) {
+    this.inputFirstname.setValue(firstName);
+    this.inputLastname.setValue(lastName);
+    this.inputZip.setValue(zip);
+  }
+  clickContinueButton() {
+    this.continueButton.click()
 
-    }
+
+  }
 }
 
 module.exports = new CheckoutYourInfoPage();

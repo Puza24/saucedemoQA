@@ -6,7 +6,6 @@ When(/^The user click logout button$/, () => {
 	HomePage.clickLogoutCard()
 });
 
-
 Then(/^The user should be redirected to login page$/, () => {
 	LoginPage.checkloginPageIsDisplayed();
 });

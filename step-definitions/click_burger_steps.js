@@ -4,7 +4,6 @@ const HomePage = require('../support/pages/homePage');
 
 Then(/^The user should see dropdown button$/, () => {
 	HomePage.dropdownMenuIsDisplayed();
-
 });
 
 

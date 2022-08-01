@@ -6,11 +6,9 @@ When(/^The user click on burger menu$/, () => {
 	HomePage.clickBurgerButton();
 });
 
-
 When(/^The user click on all items button$/, () => {
 	HomePage.clickAllItemsCard();
 });
-
 
 Then(/^The user should se all product displayed$/, () => {
 	HomePage.allProductIsDisplayed();

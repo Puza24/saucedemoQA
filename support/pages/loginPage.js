@@ -1,10 +1,9 @@
 
-
 const Page = require('./basePage');
-
+const assert = require('assert');
 
 class LoginPage extends Page {
-   
+
     get inputUsername() {
         return $('//input[@id="user-name"]');
     }
@@ -16,16 +15,21 @@ class LoginPage extends Page {
     get btnSubmit() {
         return $('//input[@id="login-button"]');
     }
+    get loginPageIsDisplayed() {
+        return $('//div[@class="login_logo"]');
+    }
+    checkloginPageIsDisplayed() {
+        assert.equal(this.loginPageIsDisplayed.isDisplayed(), true, "Login button is displayed");
+    }
 
-  
     inputUsernameAndPassword(username, password) {
-        this.inputUsername.setValue(username);
-        this.inputPassword.setValue(password);
+        this.setValue(this.inputUsername, username);
+        this.setValue(this.inputPassword, password);
 
     }
 
     clickLoginButton() {
-        this.btnSubmit.click()
+        this.click(this.btnSubmit);
 
     }
 }
